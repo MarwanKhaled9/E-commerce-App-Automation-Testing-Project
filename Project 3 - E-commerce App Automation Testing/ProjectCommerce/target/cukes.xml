@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="13" time="111.121">
+<testcase classname="user should be able to register on the system successfully" name="user register with valid on the system" time="9.952">
+<system-out><![CDATA[Given user navigate to register tab.........................................passed
+When user fill his Personal Details.........................................passed
+And fill company name.......................................................passed
+And fill password fields....................................................passed
+And user click on register button...........................................passed
+Then user could register successfully and goto home page....................passed
+]]></system-out>
+</testcase>
+<testcase classname="user should be able to login to the system" name="user login with valid username and password" time="11.795">
+<system-out><![CDATA[Given user navigate to login page...........................................passed
+When user enter a valid username and password...............................passed
+And user click on login button..............................................passed
+Then user could login successfully and goto home page.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="user should be able to change between currencies" name="changing currency" time="8.266">
+<system-out><![CDATA[Given user navigate to page and change currency.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="users should be able to search for items" name="user could search using item name" time="6.967">
+<system-out><![CDATA[Given user click on search field and search for an item.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="user able to hover over categories and select sub category" name="user could hover over categories" time="8.414">
+<system-out><![CDATA[When user hover category and select subcategory.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="F06_homeSliders | users will be able to open sliders in home page" name="first slider is clickable on home page" time="8.277">
+<failure message="expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user click on first slider.............................................passed
+Then relative product of the first slider is displayed......................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at StepDefinition.D06_homeSliderStepDef.firstProductDisplay(D06_homeSliderStepDef.java:24)
+	at ✽.relative product of the first slider is displayed(file:///C:/Users/illmi/IdeaProjects/ProjectCommerce/src/main/resources/Features/F06_homeSlider.feature:5)
+]]></failure>
+</testcase>
+<testcase classname="F06_homeSliders | users will be able to open sliders in home page" name="second slider is clickable on home page" time="10.072">
+<failure message="expected [https://demo.nopcommerce.com/iphone_s6] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user click on second slider............................................passed
+Then relative product of the second slider is displayed.....................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/iphone_s6] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at StepDefinition.D06_homeSliderStepDef.secondProductDisplay(D06_homeSliderStepDef.java:36)
+	at ✽.relative product of the second slider is displayed(file:///C:/Users/illmi/IdeaProjects/ProjectCommerce/src/main/resources/Features/F06_homeSlider.feature:9)
+]]></failure>
+</testcase>
+<testcase classname="F07_followUsOn | user should be able to open follow us links" name="user opens facebook link" time="7.573">
+<system-out><![CDATA[When user click on facebook link............................................passed
+Then facebook page opens in a new tab.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F07_followUsOn | user should be able to open follow us links" name="user opens twitter link" time="7.828">
+<system-out><![CDATA[When user click on twitter link.............................................passed
+Then twitter page opens in a new tab........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F07_followUsOn | user should be able to open follow us links" name="user opens rss link" time="7.708">
+<failure message="Index: 1, Size: 1" type="java.lang.IndexOutOfBoundsException"><![CDATA[When user click on rss link.................................................passed
+Then rss page opens in a new tab............................................failed
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at StepDefinition.D07_followUsOnStepDef.rssOpens(D07_followUsOnStepDef.java:74)
+	at ✽.rss page opens in a new tab(file:///C:/Users/illmi/IdeaProjects/ProjectCommerce/src/main/resources/Features/F07_followUsOn.feature:13)
+]]></failure>
+</testcase>
+<testcase classname="F07_followUsOn | user should be able to open follow us links" name="user opens youtube link" time="10.792">
+<system-out><![CDATA[When user click on youtube link.............................................passed
+Then youtube page opens in a new tab........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F08_wishListAdd | user able to add products in his wishlist" name="product added to wishlist successfully" time="6.755">
+<system-out><![CDATA[When user add a product to wishlist.........................................passed
+Then wishlist notification is displayed.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F09_shoppingCartAdd | user able to add products in shopping cart" name="product added to shopping cart successfully" time="6.271">
+<system-out><![CDATA[When user add a product to shopping cart....................................passed
+Then added to shopping cart notification is displayed.......................passed
+]]></system-out>
+</testcase>
+</testsuite>
